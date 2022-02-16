@@ -44,3 +44,19 @@ function displayStatusTodo() {
         }
     }
 }
+
+function display(status) {
+    const todosToDisplay = [];
+    for (var i = 0; i < todos.length; i++) {
+        if (todos[i].status === status || status === undefined) {
+            todosToDisplay.push(todos[i]);
+        }
+    }
+
+
+
+for (var i = 0; i < todosToDisplay.length; i++) {    
+        console.log(`Zadanie ${i + 1}: ${todosToDisplay[i].title} (${todosToDisplay[i].description}) - status: ${todosToDisplay[i].status}`)
+    }
+
+}
