@@ -19,7 +19,7 @@ const exampleTodo2 = {
 const exampleTodo3 = {
     title: 'Namaluj obraz',
     description: 'Użyj farb akrylowych',
-    status: 'completed',
+    status: 'inprogress',
     autor: 'Daria Koleśnik'
 }
 
@@ -54,9 +54,13 @@ function display(status) {
     }
 
 
-
-for (var i = 0; i < todosToDisplay.length; i++) {    
+if(todosToDisplay.length) { 
+    for (var i = 0; i < todosToDisplay.length; i++) {    
         console.log(`Zadanie ${i + 1}: ${todosToDisplay[i].title} (${todosToDisplay[i].description}) - status: ${todosToDisplay[i].status}`)
     }
+
+} else {
+    console.log('brak zadań');
+}
 
 }
