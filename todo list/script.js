@@ -37,3 +37,10 @@ function displayAll() {
 }
 
     
+function displayStatusTodo() {
+    for (var i = 0; i < todos.length; i++) { 
+        if (todos[i].status === 'todo') {   
+        console.log(`Zadanie ${i + 1}: ${todos[i].title} (${todos[i].description}) - status: ${todos[i].status}`)
+        }
+    }
+}
