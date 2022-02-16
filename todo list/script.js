@@ -106,3 +106,13 @@ function addTodo(title, description, status, autor){
 
 // ZAD 3
 
+function removeTodo(todo) {
+    
+    const { title, description, status} = todos[todo-1];
+
+    todos.splice(1, todo-1);
+    console.log(`Usunięte zadanie: ${title} (${description}) - status: ${status})`);
+    console.log('-----');
+    console.log('Wszystkie zadania:');
+    display();
+}
